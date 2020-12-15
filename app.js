@@ -5,7 +5,7 @@ var outputTxt = document.querySelector("#output-txt");
 var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
 function getConvertedURL(input) {
-    return serverURL + "?text=" + input;
+    return serverURL + "?" + "text=" + input;
 }
 
 function errorHandler(error) {
@@ -15,15 +15,15 @@ function errorHandler(error) {
 
 function clickHandler() {
     var input = inputTxt.value;
-    // console.log(getConvertedURL(input));
+    console.log(getConvertedURL(input));
 
     fetch(getConvertedURL(input))
-        .then( response => response.json())
-        .then( json => {
-            var translation = json.contents.translated;
-            outputTxt.innerText = translation;
-        })
-        .catch(errorHandler); 
-}
+        .then(response => response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            outputDiv.innerText = translatedText; // output
+           })
+        .catch(errorHandler)
+};
 
 btnTranslate.addEventListener("click", clickHandler);
