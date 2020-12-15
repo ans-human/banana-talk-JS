@@ -34,17 +34,21 @@ body {
     text-align: center;
     background-color: var(--primary-color);
     border-radius: .2rem;
-    border-style: none;
+    border-style:none;
 }
 
+.button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
 .container {
     padding: 1rem;
     margin: 0px;
-    margin-bottom: 0px;
     background-color: var(--primary-color);
 }
 
 .text {
     max-width: var(--width-break);
     margin: auto;
+    margin-bottom: 2rem;
 }
