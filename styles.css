@@ -17,7 +17,7 @@ body {
     font-family: 'Kalam', cursive;
     padding: 1rem;
     width: 80%;
-    height: 15vh;
+    height: 20vh;
     display: block;
     margin: auto;
     margin-bottom: 2rem;
@@ -42,7 +42,7 @@ body {
     font-weight: bold;
 }
 .container {
-    padding: 1rem;
+    padding: .1rem;
     margin: 0px;
     background-color: var(--primary-color);
 }
